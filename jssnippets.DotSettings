@@ -1,0 +1,183 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Shortcut/@EntryValue">collection</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Description/@EntryValue">Backbone collection</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Text/@EntryValue">var Collection = Backbone.Collection.extend({&#xD;
+	&#xD;
+	model: $MODEL$,&#xD;
+&#xD;
+	url: '$URL$',&#xD;
+&#xD;
+	initialize: function () {&#xD;
+		this.load();&#xD;
+	},&#xD;
+&#xD;
+	parse: function (response) {&#xD;
+		if (!response.d || response.d.Status != 'OK') {&#xD;
+			TopNotification.showError("An error occured while loading $CONTEXT$.");&#xD;
+			return [];&#xD;
+		}&#xD;
+		return response.d.Data;&#xD;
+	},
+
+	load: function () {&#xD;
+		this.fetch({&#xD;
+			data: JSON.stringify({}),
+			dataType: 'json',
+			type: 'POST',
+			contentType: "application/json; charset=utf-8",
+			success: function (data) {&#xD;
+				// manually parse data here&#xD;
+				$END$&#xD;
+			}&#xD;
+		});&#xD;
+	}&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Field/=MODEL/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Field/=MODEL/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Field/=URL/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Field/=URL/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Field/=CONTEXT/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D7C277901B7B544BBD69DB279A15CC21/Field/=CONTEXT/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Shortcut/@EntryValue">define</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Description/@EntryValue">require.js define declaration</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Text/@EntryValue">define('$NAME$', [$PARAMS$],&#xD;
+function ($DECL$) {&#xD;
+	$END$&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Field/=NAME/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Field/=PARAMS/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Field/=PARAMS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Field/=DECL/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=758E276B2495C8499C03CCE0CD943A12/Field/=DECL/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Shortcut/@EntryValue">extend</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Description/@EntryValue">extend bacbone defaults object</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Text/@EntryValue">_.extend({}, Base.prototype.defaults, {&#xD;
+	$PROPS$&#xD;
+})$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Field/=PROPS/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=5EAF1F4E171D274EAB82D66668120E16/Field/=PROPS/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Shortcut/@EntryValue">filescope</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Description/@EntryValue">Self invoking function for scoping</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Text/@EntryValue">;(function () {&#xD;
+	$END$&#xD;
+}());</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=51A35AE2238C3F4C91A5D7D780121F4F/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Shortcut/@EntryValue">getter</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Description/@EntryValue">getter setter</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Text/@EntryValue">get$NAME$: function () {&#xD;
+	return this.get('$PROP$');&#xD;
+},&#xD;
+&#xD;
+set$NAME$: function (value) {&#xD;
+	this.set('$PROP$', value);&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Field/=NAME/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Field/=PROP/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D3E7E9CCE7D7B244BF716DC408150933/Field/=PROP/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Shortcut/@EntryValue">log</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Description/@EntryValue">console.log</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Text/@EntryValue">console.log($END$);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=78384029BAD54F448CAECFEE6A25EDAF/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Shortcut/@EntryValue">model</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Description/@EntryValue">Backbone model</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Text/@EntryValue">var Model = Backbone.Model.extend({&#xD;
+	defaults: {&#xD;
+		$VAL$&#xD;
+	},&#xD;
+&#xD;
+	initialize: function () {&#xD;
+		$END$&#xD;
+	}&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Field/=VAL/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C159DB2F2A773640B8972ED35FD4BE57/Field/=VAL/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Shortcut/@EntryValue">that</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Description/@EntryValue">var that = this</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Text/@EntryValue">var that = this;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7E76D4DB8966CE47A375805D69663E89/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Shortcut/@EntryValue">timeout</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Description/@EntryValue">Simple set timeout </s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Text/@EntryValue">setTimeout(function () {&#xD;
+	$END$&#xD;
+}, $0$);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Field/=0/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CF14639089C6484A9CF76D4224AD4018/Field/=0/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Shortcut/@EntryValue">view</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Description/@EntryValue">Backbone view</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Text/@EntryValue">var View = Backbone.View.extend({&#xD;
+	el: '',&#xD;
+&#xD;
+	events: {&#xD;
+	&#xD;
+	},&#xD;
+&#xD;
+	initialize: function () {&#xD;
+	&#xD;
+	}&#xD;
+});$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Categories/=My_0020own_0020js_0020snippets/@EntryIndexedValue">My own js snippets</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=ECC97A2A365E0F47873D27892163726D/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String></wpf:ResourceDictionary>
